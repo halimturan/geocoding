@@ -5,3 +5,4 @@ from api.views.kapi import *
 from api.views.poi_dini import *
 from api.views.poi_emlak import *
 from api.views.poi_ticaret import *
+from api.views.poi_sanayi import *

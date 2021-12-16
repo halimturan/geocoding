@@ -54,3 +54,10 @@ class POITicaret(models.Model):
     ilce_ad = models.CharField(max_length=50, verbose_name="İsim")
     mahalle_ad = models.CharField(max_length=50, verbose_name="Mahalle İsim")
     geo = models.GeometryField(verbose_name="Geometri")
+
+
+class POISanayi(models.Model):
+    ad = models.CharField(max_length=250, verbose_name="İsim")
+    ilce_ad = models.CharField(max_length=50, verbose_name="İsim")
+    mahalle_ad = models.CharField(max_length=50, verbose_name="Mahalle İsim")
+    geo = models.GeometryField(verbose_name="Geometri")

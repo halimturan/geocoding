@@ -12,6 +12,7 @@ router.register(r'kapi', KapiViewSet)
 router.register(r'dini', POIDiniViewSet)
 router.register(r'emlak', POIEmlakViewSet)
 router.register(r'ticaret', POITicaretViewSet)
+router.register(r'sanayi', POISanayiViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
