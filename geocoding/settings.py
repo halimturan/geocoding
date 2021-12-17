@@ -163,4 +163,5 @@ CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:3033",
     "http://localhost:3033",
     "http://10.6.128.70:6161"
+    "http://10.6.129.158"
 ]
