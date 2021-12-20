@@ -9,10 +9,7 @@ router.register(r'ilce', IlceViewSet)
 router.register(r'mahalle', MahalleViewSet)
 router.register(r'yol', YolViewSet)
 router.register(r'kapi', KapiViewSet)
-router.register(r'dini', POIDiniViewSet)
-router.register(r'emlak', POIEmlakViewSet)
-router.register(r'ticaret', POITicaretViewSet)
-router.register(r'sanayi', POISanayiViewSet)
+router.register(r'poi', POIViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),

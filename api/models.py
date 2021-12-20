@@ -35,29 +35,10 @@ class Kapi(models.Model):
     geo = models.GeometryField(verbose_name="Geometri")
 
 
-class POIDini(models.Model):
+class POI(models.Model):
+    poi_id = models.BigIntegerField(verbose_name="POI ID")
     ad = models.CharField(max_length=250, verbose_name="İsim")
     ilce_ad = models.CharField(max_length=50, verbose_name="İsim")
     mahalle_ad = models.CharField(max_length=50, verbose_name="Mahalle İsim")
-    geo = models.GeometryField(verbose_name="Geometri")
-
-
-class POIEmlak(models.Model):
-    ad = models.CharField(max_length=250, verbose_name="İsim")
-    ilce_ad = models.CharField(max_length=50, verbose_name="İsim")
-    mahalle_ad = models.CharField(max_length=50, verbose_name="Mahalle İsim")
-    geo = models.GeometryField(verbose_name="Geometri")
-
-
-class POITicaret(models.Model):
-    ad = models.CharField(max_length=250, verbose_name="İsim")
-    ilce_ad = models.CharField(max_length=50, verbose_name="İsim")
-    mahalle_ad = models.CharField(max_length=50, verbose_name="Mahalle İsim")
-    geo = models.GeometryField(verbose_name="Geometri")
-
-
-class POISanayi(models.Model):
-    ad = models.CharField(max_length=250, verbose_name="İsim")
-    ilce_ad = models.CharField(max_length=50, verbose_name="İsim")
-    mahalle_ad = models.CharField(max_length=50, verbose_name="Mahalle İsim")
+    bina_ad = models.CharField(max_length=250, verbose_name="Mahalle İsim")
     geo = models.GeometryField(verbose_name="Geometri")
