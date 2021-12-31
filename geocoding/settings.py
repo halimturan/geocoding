@@ -73,7 +73,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'corsheaders.middleware.CorsMiddleware',
 ]
-
+CORS_ALLOW_ALL_ORIGINS = True
 ROOT_URLCONF = 'geocoding.urls'
 
 TEMPLATES = [
@@ -157,11 +157,11 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",
-    "http://127.0.0.1:8000",
-    "http://127.0.0.1:3033",
-    "http://localhost:3033",
-    "http://10.6.128.70:6161",
-    "http://10.6.129.158"
-]
+# CORS_ALLOWED_ORIGINS = [
+#     "http://localhost:3000",
+#     "http://127.0.0.1:8000",
+#     "http://127.0.0.1:3033",
+#     "http://localhost:3033",
+#     "http://10.6.128.70:6161",
+#     "http://10.6.129.158"
+# ]
