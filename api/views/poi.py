@@ -10,7 +10,7 @@ class POIViewSet(viewsets.ModelViewSet):
     queryset = POI.objects.all()
     serializer_class = POISerializer
     filter_backends = (DjangoFilterBackend, filters.OrderingFilter,)
-    filterset_fields = ('id',)
+    filterset_fields = ('id', 'poi_id')
 
     @action(detail=False)
     def type_geojson(self, request, *args, **kwargs):
