@@ -37,8 +37,13 @@ class Kapi(models.Model):
 
 class POI(models.Model):
     poi_id = models.BigIntegerField(verbose_name="POI ID")
+    kategori_id = models.SmallIntegerField(verbose_name="Kategori ID", null=True, blank=True)
+    alt_kategori_id = models.SmallIntegerField(verbose_name="Alt Kategori ID", null=True, blank=True)
     ad = models.CharField(max_length=250, verbose_name="İsim")
     ilce_ad = models.CharField(max_length=50, verbose_name="İsim")
     mahalle_ad = models.CharField(max_length=50, verbose_name="Mahalle İsim")
+    kategori = models.CharField(max_length=50, verbose_name="Kategori", null=True, blank=True)
+    alt_kategori = models.CharField(max_length=50, verbose_name="Alt Kategori", null=True, blank=True)
+    icon = models.CharField(max_length=50, verbose_name="İkon", null=True, blank=True)
     bina_ad = models.CharField(max_length=250, verbose_name="Mahalle İsim")
     geo = models.GeometryField(verbose_name="Geometri")
