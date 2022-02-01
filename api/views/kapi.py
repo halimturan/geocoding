@@ -4,6 +4,18 @@ from api.models import Kapi
 from rest_framework.decorators import action
 from rest_framework.response import Response
 from django_filters.rest_framework import DjangoFilterBackend
+from django_filters.filters import CharFilter
+from rest_framework_gis.filterset import GeoFilterSet
+from rest_framework_gis.filters import GeometryFilter
+
+
+class RegionFilter(GeoFilterSet):
+    id = CharFilter(field_name="id")
+    contains_geom = GeometryFilter(field_name="geo", lookup_expr='contains')
+
+    class Meta:
+        exclude = ('geo',)
+        model = Kapi
 
 
 class KapiViewSet(viewsets.ModelViewSet):
@@ -18,5 +30,3 @@ class KapiViewSet(viewsets.ModelViewSet):
         queryset = self.filter_queryset(qs)
         serializer = KapiGeojsonSerializer(queryset, many=True)
         return Response(serializer.data)
-
-
