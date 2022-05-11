@@ -27,11 +27,15 @@ class Yol(models.Model):
 class Kapi(models.Model):
     ilce_id = models.IntegerField(verbose_name="İlçe ID")
     mahalle_id = models.IntegerField(verbose_name="Mahalle ID")
-    ilce_ad = models.CharField(max_length=50, verbose_name="İsim")
+    ilce_ad = models.CharField(max_length=50, verbose_name="İlçe İsim")
+    ilce_search_ad = models.CharField(max_length=50, verbose_name="İlçe İsim (Search)")
     mahalle_ad = models.CharField(max_length=50, verbose_name="Mahalle İsim")
+    mahalle_search_ad = models.CharField(max_length=50, verbose_name="Mahalle İsim (Search)")
     kapi_no = models.CharField(max_length=50, verbose_name="Kapı No")
+    kapi_search_no = models.CharField(max_length=50, verbose_name="Kapı No (Search)")
     bina_ad = models.CharField(max_length=250, verbose_name="Bina İsmi")
     yol_ad = models.CharField(max_length=250, verbose_name="Yol İsmi")
+    yol_search_ad = models.CharField(max_length=250, verbose_name="Yol İsmi (Search)")
     geo = models.GeometryField(verbose_name="Geometri")
 
 
